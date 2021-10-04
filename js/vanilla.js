@@ -1,9 +1,16 @@
-let ajaxcall = new XMLHttpRequest();
+const api_url = "http://localhost:8000/api/v1/titles/"
 
-ajaxcall.open("POST", "path/to/api", true);
-ajaxcall.onreadystatechange = function () {
-    if (ajaxcall.readyState != 4 || ajaxcall.status != 200)
-        return;
-    alert("Success: " + ajaxcall.responseText);
-};
-ajaxcall.send("banana=yellow");
+/*
+    Get the best rated movie on imdb
+*/
+function getBestRatedMovie() {
+    fetch(api_url + '?sort_by=-imdb_score')
+        .then(res => res.json())
+        .then(data => {
+            const best_rated_movie = data.results[0]
+            document.getElementById("best-image").src = best_rated_movie.image_url
+            document.getElementById("best-movie-title").innerText = best_rated_movie.title
+        })
+}
+
+getBestRatedMovie()
