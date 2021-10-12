@@ -3,8 +3,9 @@
 
 <head>
    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Just Stream It</title>
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/main.css">
    <script src="js/vanilla.js"></script>
 </head>
 
@@ -12,35 +13,20 @@
    <header>
       <div class="logo">
          <img src="logo.png" />
-      </div>>
+      </div>
       <nav class="navbar">
-         <a href="#" class="active">Accueil</a>
+         <a href="#">Accueil</a>
          <a href="#">Catégories</a>
       </nav>
    </header>
    <div class="movies-container">
-      <h3>Le meilleur film</h3>
-      <div class="bestmovie" id="best-movie">
-         <h1 id="best-movie-title"></h1>
-         <img id="best-image" src="#" alt="image du film" />
-         <p id="best-description"></p>
-
-      </div>
-      <div class="bestmovies">
-         <h6 class="movie-title">p.s. bonjour</h6>
-         <img src="#" alt="p.s. bonjour Poster" />
-      </div>
-      <div class="cat1">
-         <h6 class="movie-title">p.s. bonjour</h6>
-         <img src="#" alt="p.s. bonjour Poster" />
-      </div>
-      <div class="cat2">
-         <h6 class="movie-title">p.s. bonjour</h6>
-         <img src="#" alt="p.s. bonjour Poster" />
-      </div>
-      <div class="cat3">
-         <h6 class="movie-title">p.s. bonjour</h6>
-         <img src="#" alt="p.s. bonjour Poster" />
+      <div class="top-rated-movie">
+         <h1 id="top-rated-movie-title"></h1>
+         <div class="top-rated-movie-image">
+            <img id="top-rated-movie-image" src="#" alt="image du film" style="width: 300px;"/>
+         </div>
+         <p id="top-rated-movie-description"></p>
+         <a id="top-rated-movie-button-play" href="#button">Play</a>
       </div>
    </div>
 </body>

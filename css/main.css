@@ -1,0 +1,47 @@
+.logo {
+  background-color: grey;
+  background-image: transparent;
+  border: 1px solid;
+}
+
+.navbar {
+  position: absolute;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  top: 3%;
+  left: 50%;
+  font-size: 17px;
+}
+
+.movies-container {
+  margin-top: 10rem;
+  padding: 2em 50em;
+  border: black solid;
+  border-radius: 10px;
+}
+
+#top-rated-movie {
+  position: absolute;
+}
+
+#top-rated-movie-title {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: blue;
+}
+
+#top-rated-movie-image {
+  padding-left: 40%;
+}
+
+#top-rated-movie-button-play {
+  position: absolute;
+  padding: 1em 2em;
+  border-radius: 20px;
+  top: 40%;
+  left: 5%;
+  background-color: #c51b1b;
+  color: #FFF;
+  text-decoration: none;
+}

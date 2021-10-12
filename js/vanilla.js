@@ -15,8 +15,8 @@ function getBestRatedMovie() {
         })
         .then((data => {
             const best_rated_movie = data.results[0]
-            document.getElementById("best-image").src = best_rated_movie.image_url
-            document.getElementById("best-movie-title").innerText = best_rated_movie.title
+            document.getElementById("top-rated-movie-image").src = best_rated_movie.image_url
+            document.getElementById("top-rated-movie-title").innerText = best_rated_movie.title
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
