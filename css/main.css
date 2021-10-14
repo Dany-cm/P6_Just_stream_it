@@ -1,23 +1,27 @@
 .logo {
-  background-color: grey;
-  background-image: transparent;
+  background-color: #707683;
   border: 1px solid;
 }
 
 .navbar {
   position: absolute;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
   top: 3%;
-  left: 50%;
-  font-size: 17px;
+  left: 45%;
+  text-align: center;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: 20px;
 }
 
-.movies-container {
-  margin-top: 10rem;
+.navbar a {
+  padding-left: 120px;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.top-rated-movie-container {
+  margin-top: 4rem;
   padding: 2em 50em;
-  border: black solid;
-  border-radius: 10px;
+  border: 10px black solid;
 }
 
 #top-rated-movie {
@@ -26,9 +30,8 @@
 
 #top-rated-movie-title {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 5%;
-  color: blue;
 }
 
 #top-rated-movie-image {
@@ -37,11 +40,22 @@
 
 #top-rated-movie-button-play {
   position: absolute;
-  padding: 1em 2em;
-  border-radius: 20px;
-  top: 40%;
-  left: 5%;
-  background-color: #c51b1b;
+  padding: 0.4em 2em;
+  border-radius: 30px;
+  top: 30%;
+  left: 6%;
+  background-color: #e23535;
   color: #FFF;
   text-decoration: none;
+}
+
+.best-rated-movies-container > h1 {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
+
+.best-rated-movies-container img {
+  padding-left: 20%;
+  padding-top: 7%;
 }
