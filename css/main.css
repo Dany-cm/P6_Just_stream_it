@@ -49,13 +49,29 @@
   text-decoration: none;
 }
 
-.best-rated-movies-container > h1 {
+#best-rated-movies-container {
   position: absolute;
-  top: 60%;
-  left: 20%;
 }
 
-.best-rated-movies-container img {
-  padding-left: 20%;
-  padding-top: 7%;
+#best-rated-movies-container-title {
+  position: absolute;
+  top: 60%;
+  left: 48%;
+}
+
+#best-rated-movies-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 8%;
+  padding-left: 5%;
+  margin-left: 30%;
+  margin-right: 30%;
 }

@@ -38,6 +38,9 @@ function initCarouselBestRated() {
         })
         .then((data => {
             addCarouselItem(data.results[0], "best-rated-movies-carousel")
+            addCarouselItem(data.results[1], "best-rated-movies-carousel")
+            addCarouselItem(data.results[2], "best-rated-movies-carousel")
+            addCarouselItem(data.results[3], "best-rated-movies-carousel")
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
@@ -46,19 +49,12 @@ function initCarouselBestRated() {
 
 function addCarouselItem(movie, carouselDivId) {
     const div_item = document.createElement("div");
-    //div_item.classList.add('best-rated-movies-h1');
-    const title = document.createElement('h1')
-    title.classList.add('best-rated-movies-h1');
     const image = document.createElement('img')
-    //const description = document.createElement('p')
 
-    title.textContent = `${movie.title}`
     image.src = `${movie.image_url}`
-    //description.textContent = `${movie.description}`
 
-    div_item.appendChild(title)
     div_item.appendChild(image)
-    //div_item.appendChild(description)
+
     document.getElementById(carouselDivId).appendChild(div_item)
 
 }

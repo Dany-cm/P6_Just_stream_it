@@ -49,15 +49,22 @@
     }
 }
 
-.best-rated-movies-container {
-    > h1 {
+#best-rated-movies-container {
+    position: absolute;
+
+    &-title {
         position: absolute;
         top: 60%;
-        left: 20%;
+        left: 48%;
     }
+}
 
-    img {
-        padding-left: 20%;
-        padding-top: 7%;
-    }
+#best-rated-movies-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    padding-left: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
