@@ -54,7 +54,7 @@
 
     &-title {
         position: absolute;
-        top: 60%;
+        top: 62%;
         left: 48%;
     }
 }
@@ -67,4 +67,73 @@
     padding-left: 5%;
     margin-left: 30%;
     margin-right: 30%;
+}
+
+#action-category-container {
+    position: absolute;
+
+    &-title {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+    }
+}
+
+#action-category-movies-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    padding-left: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#horror-category-container {
+    position: absolute;
+
+    &-title {
+        position: absolute;
+        top: 135%;
+        left: 50%;
+    }
+}
+
+#horror-category-movies-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    padding-left: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#drama-category-container {
+    position: absolute;
+
+    &-title {
+        position: absolute;
+        top: 173%;
+        left: 50%;
+    }
+}
+
+#drama-category-movies-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8%;
+    padding-left: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.footer {
+    margin-top: 5%;
+    background-color: rgb(112, 118, 131);
+    border: 1px solid;
+    text-align: center;
+    color: lightgray;
 }
