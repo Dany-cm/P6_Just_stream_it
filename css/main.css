@@ -1,14 +1,22 @@
-.logo {
-  background-color: #707683;
-  border: 1px solid;
+body {
+  background-color: #2e3136;
+}
+
+header {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding-right: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#2e3136));
+  background: linear-gradient(black, #2e3136);
 }
 
 .navbar {
   position: absolute;
-  top: 3%;
-  left: 45%;
+  top: 40%;
+  left: 36%;
   text-align: center;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 
@@ -19,9 +27,10 @@
 }
 
 .top-rated-movie-container {
-  margin-top: 4rem;
+  margin-top: 9rem;
   padding: 2em 50em;
-  border: 10px black solid;
+  border: 10px lightcoral solid;
+  background-color: black;
 }
 
 #top-rated-movie {
@@ -32,6 +41,7 @@
   position: absolute;
   top: 25%;
   left: 6%;
+  color: white;
 }
 
 #top-rated-movie-image {
@@ -68,6 +78,7 @@
   position: absolute;
   top: 62%;
   left: 48%;
+  color: white;
 }
 
 #best-rated-movies-container-arrow-left {
@@ -75,7 +86,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -90,7 +101,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -128,6 +139,7 @@
   position: absolute;
   top: 100%;
   left: 50%;
+  color: white;
 }
 
 #action-category-container-arrow-left {
@@ -135,7 +147,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -150,7 +162,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -185,6 +197,7 @@
   position: absolute;
   top: 135%;
   left: 50%;
+  color: white;
 }
 
 #horror-category-container-arrow-left {
@@ -192,7 +205,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -207,7 +220,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -242,6 +255,7 @@
   position: absolute;
   top: 173%;
   left: 50%;
+  color: white;
 }
 
 #drama-category-container-arrow-left {
@@ -249,7 +263,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -264,7 +278,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid black;
+  border: solid white;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 10px;
@@ -294,7 +308,7 @@
 .footer {
   margin-top: 5%;
   background-color: #707683;
-  border: 1px solid;
+  border: 1px black solid;
   text-align: center;
   color: lightgray;
 }

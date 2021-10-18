@@ -41,16 +41,16 @@ function initCarouselBestRated() {
             }
         })
         .then((data => {
-            addCarouselItem(data.results[1], "best-rated-movies-carousel")
-            addCarouselItem(data.results[2], "best-rated-movies-carousel")
-            addCarouselItem(data.results[3], "best-rated-movies-carousel")
-            addCarouselItem(data.results[4], "best-rated-movies-carousel")
+            for (let i = 0; i < 4; ++i) {
+                addCarouselItem(data.results[i], "best-rated-movies-carousel")
+            }
+            
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
         });
 
-    fetch(api_url + '?genre=action')
+    fetch(api_url + '?genre=action' + '&sort_by=-imdb_score')
         .then((res) => {
             if (res.ok) {
                 return res.json();
@@ -60,16 +60,15 @@ function initCarouselBestRated() {
             }
         })
         .then((data => {
-            addCarouselItem(data.results[1], "action-category-movies-carousel")
-            addCarouselItem(data.results[2], "action-category-movies-carousel")
-            addCarouselItem(data.results[3], "action-category-movies-carousel")
-            addCarouselItem(data.results[4], "action-category-movies-carousel")
+            for (let i = 0; i < 4; ++i) {
+                addCarouselItem(data.results[i], "action-category-movies-carousel")
+            }
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
         });
 
-    fetch(api_url + '?genre=horror')
+    fetch(api_url + '?genre=horror' + '&sort_by=-imdb_score')
         .then((res) => {
             if (res.ok) {
                 return res.json();
@@ -79,16 +78,15 @@ function initCarouselBestRated() {
             }
         })
         .then((data => {
-            addCarouselItem(data.results[1], "horror-category-movies-carousel")
-            addCarouselItem(data.results[2], "horror-category-movies-carousel")
-            addCarouselItem(data.results[3], "horror-category-movies-carousel")
-            addCarouselItem(data.results[4], "horror-category-movies-carousel")
+            for (let i = 0; i < 4; ++i) {
+                addCarouselItem(data.results[i], "horror-category-movies-carousel")
+            }
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
         });
 
-    fetch(api_url + '?genre=drama')
+    fetch(api_url + '?genre=drama' + '&sort_by=-imdb_score')
         .then((res) => {
             if (res.ok) {
                 return res.json();
@@ -98,10 +96,9 @@ function initCarouselBestRated() {
             }
         })
         .then((data => {
-            addCarouselItem(data.results[1], "drama-category-movies-carousel")
-            addCarouselItem(data.results[2], "drama-category-movies-carousel")
-            addCarouselItem(data.results[3], "drama-category-movies-carousel")
-            addCarouselItem(data.results[4], "drama-category-movies-carousel")
+            for (let i = 0; i < 4; ++i) {
+                addCarouselItem(data.results[i], "drama-category-movies-carousel")
+            }
         }))
         .catch((error) => {
             console.log("Fetch Error :-S", error);
@@ -118,4 +115,9 @@ function addCarouselItem(movie, carouselDivId) {
     div_item.appendChild(image)
 
     document.getElementById(carouselDivId).appendChild(div_item)
+}
+
+function scrollContainer(direction) {
+    console.log('event', event)
+    console.log('direction', direction)
 }
