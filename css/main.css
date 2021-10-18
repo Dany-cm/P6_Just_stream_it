@@ -31,7 +31,7 @@
 #top-rated-movie-title {
   position: absolute;
   top: 25%;
-  left: 5%;
+  left: 6%;
 }
 
 #top-rated-movie-image {
@@ -44,8 +44,19 @@
   border-radius: 30px;
   top: 30%;
   left: 6%;
-  background-color: #e23535;
-  color: #FFF;
+  background-color: #e60606;
+  color: white;
+  text-decoration: none;
+}
+
+#top-rated-movie-button-info {
+  position: absolute;
+  padding: 0.4em 2em;
+  border-radius: 30px;
+  top: 30%;
+  left: 10%;
+  background-color: #e60606;
+  color: white;
   text-decoration: none;
 }
 
@@ -57,6 +68,36 @@
   position: absolute;
   top: 62%;
   left: 48%;
+}
+
+#best-rated-movies-container-arrow-left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 80%;
+  left: 33%;
+}
+
+#best-rated-movies-container-arrow-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 80%;
+  left: 71%;
 }
 
 #best-rated-movies-carousel {
@@ -89,6 +130,36 @@
   left: 50%;
 }
 
+#action-category-container-arrow-left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 115%;
+  left: 33%;
+}
+
+#action-category-container-arrow-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 115%;
+  left: 71%;
+}
+
 #action-category-movies-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,6 +187,36 @@
   left: 50%;
 }
 
+#horror-category-container-arrow-left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 155%;
+  left: 33%;
+}
+
+#horror-category-container-arrow-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 155%;
+  left: 71%;
+}
+
 #horror-category-movies-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,6 +242,36 @@
   position: absolute;
   top: 173%;
   left: 50%;
+}
+
+#drama-category-container-arrow-left {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 190%;
+  left: 33%;
+}
+
+#drama-category-container-arrow-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 190%;
+  left: 71%;
 }
 
 #drama-category-movies-carousel {

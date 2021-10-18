@@ -30,7 +30,7 @@
     &-title {
         position: absolute;
         top: 25%;
-        left: 5%;
+        left: 6%;
     }
 
     &-image {
@@ -43,8 +43,18 @@
         border-radius: 30px;
         top: 30%;
         left: 6%;
-        background-color: #e23535;
-        color: #FFF;
+        background-color: #e60606;
+        color: white;
+        text-decoration: none;
+    }
+    &-button-info {
+        position: absolute;
+        padding: 0.4em 2em;
+        border-radius: 30px;
+        top: 30%;
+        left: 10%;
+        background-color: #e60606;
+        color: white;
         text-decoration: none;
     }
 }
@@ -56,6 +66,30 @@
         position: absolute;
         top: 62%;
         left: 48%;
+    }
+
+    &-arrow-left {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(135deg);
+        top: 80%;
+        left: 33%;
+    }
+
+    &-arrow-right {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-45deg);
+        top: 80%;
+        left: 71%;
     }
 }
 
@@ -78,6 +112,29 @@
         top: 100%;
         left: 50%;
     }
+    &-arrow-left {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(135deg);
+        top: 115%;
+        left: 33%;
+    }
+
+    &-arrow-right {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-45deg);
+        top: 115%;
+        left: 71%;
+    }
 }
 
 #action-category-movies-carousel {
@@ -98,6 +155,30 @@
         top: 135%;
         left: 50%;
     }
+
+    &-arrow-left {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(135deg);
+        top: 155%;
+        left: 33%;
+    }
+
+    &-arrow-right {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-45deg);
+        top: 155%;
+        left: 71%;
+    }
 }
 
 #horror-category-movies-carousel {
@@ -117,6 +198,30 @@
         position: absolute;
         top: 173%;
         left: 50%;
+    }
+
+    &-arrow-left {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(135deg);
+        top: 190%;
+        left: 33%;
+    }
+
+    &-arrow-right {
+        position: absolute;
+        display: flex;
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 10px;
+        transform: rotate(-45deg);
+        top: 190%;
+        left: 71%;
     }
 }
 
