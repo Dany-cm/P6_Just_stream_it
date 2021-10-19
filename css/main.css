@@ -6,7 +6,7 @@ header {
   position: absolute;
   top: 0%;
   left: 0%;
-  padding-right: 100%;
+  padding-right: 82.8%;
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(#2e3136));
   background: linear-gradient(black, #2e3136);
 }
@@ -14,7 +14,7 @@ header {
 .navbar {
   position: absolute;
   top: 40%;
-  left: 36%;
+  left: 42%;
   text-align: center;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
@@ -29,7 +29,6 @@ header {
 .top-rated-movie-container {
   margin-top: 9rem;
   padding: 2em 50em;
-  border: 10px lightcoral solid;
   background-color: black;
 }
 
@@ -247,18 +246,18 @@ header {
   margin-right: 30%;
 }
 
-#drama-category-container {
+#crime-category-container {
   position: absolute;
 }
 
-#drama-category-container-title {
+#crime-category-container-title {
   position: absolute;
   top: 173%;
   left: 50%;
   color: white;
 }
 
-#drama-category-container-arrow-left {
+#crime-category-container-arrow-left {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -273,7 +272,7 @@ header {
   left: 33%;
 }
 
-#drama-category-container-arrow-right {
+#crime-category-container-arrow-right {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,7 +287,7 @@ header {
   left: 71%;
 }
 
-#drama-category-movies-carousel {
+#crime-category-movies-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

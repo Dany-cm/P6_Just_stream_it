@@ -6,14 +6,14 @@ header {
     position: absolute;
     top: 0%;
     left: 0%;
-    padding-right: 100%;
+    padding-right: 82.8%;
     background: linear-gradient(black, rgb(46, 49, 54));
 }
 
 .navbar {
     position: absolute;
     top: 40%;
-    left: 36%;
+    left: 42%;
     text-align: center;
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     font-size: 20px;
@@ -28,7 +28,7 @@ header {
 .top-rated-movie-container {
     margin-top: 9rem;
     padding: 2em 50em;
-    border: 10px lightcoral solid;
+    //border: 1px gray solid;
     background-color: black;
 }
 
@@ -203,7 +203,7 @@ header {
     margin-right: 30%;
 }
 
-#drama-category-container {
+#crime-category-container {
     position: absolute;
 
     &-title {
@@ -238,7 +238,7 @@ header {
     }
 }
 
-#drama-category-movies-carousel {
+#crime-category-movies-carousel {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
