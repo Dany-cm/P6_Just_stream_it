@@ -1,67 +1,76 @@
+html {
+    height: 100%;
+}
 body {
+    margin: 0;
+    height: 160vh;
     background-color: rgb(46, 49, 54);
 }
 
 header {
     position: absolute;
-    top: 0%;
-    left: 0%;
-    padding-right: 82.8%;
+    box-sizing: content-box;
+    width: 100%;
     background: linear-gradient(black, rgb(46, 49, 54));
 }
 
 .navbar {
     position: absolute;
-    top: 40%;
-    left: 42%;
+    top: 30%;
+    left: 45%;
     text-align: center;
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    font-size: 20px;
 
     a {
-        padding-left: 120px;
+        padding-right: 50px;
         text-decoration: none;
         color: lightgray;
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        font-size: 20px;
     }
 }
 
-.top-rated-movie-container {
+#top-rated-movie-container {
+    position: absolute;
+    left: 0;
+    right: 1px;
     margin-top: 9rem;
     padding: 2em 50em;
-    //border: 1px gray solid;
+    padding-bottom: 400px;
     background-color: black;
 }
 
 #top-rated-movie {
-    position: absolute;
 
     &-title {
         position: absolute;
         top: 25%;
-        left: 6%;
+        left: 15%;
         color: white;
     }
 
     &-image {
-        padding-left: 40%;
+        position: absolute;
+        top: 13%;
+        left: 43.5%;
     }
 
     &-button-play {
         position: absolute;
-        padding: 0.4em 2em;
-        border-radius: 30px;
-        top: 30%;
-        left: 6%;
-        background-color: #e60606;
+        top: 40%;
+        left: 11%;
         color: white;
         text-decoration: none;
+        border-radius: 30px;
+        background-color: #e60606;
+        padding: 0.4em 2em
     }
+
     &-button-info {
         position: absolute;
         padding: 0.4em 2em;
         border-radius: 30px;
-        top: 30%;
-        left: 10%;
+        top: 40%;
+        left: 15%;
         background-color: #e60606;
         color: white;
         text-decoration: none;
@@ -70,11 +79,16 @@ header {
 
 #best-rated-movies-container {
     position: absolute;
+    top: 40%;
+    left: 0;
+    right: 1px;
+    padding-bottom: 400px;
+    border-bottom-width: 30vh;
 
     &-title {
         position: absolute;
-        top: 62%;
-        left: 48%;
+        top: 50%;
+        left: 45%;
         color: white;
     }
 
@@ -87,7 +101,7 @@ header {
         padding: 10px;
         transform: rotate(135deg);
         top: 80%;
-        left: 33%;
+        left: 35%;
     }
 
     &-arrow-right {
@@ -99,30 +113,25 @@ header {
         padding: 10px;
         transform: rotate(-45deg);
         top: 80%;
-        left: 71%;
+        left: 60%;
     }
 }
 
-#best-rated-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 8%;
-    padding-left: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#action-category-container {
+#aventure-category-container {
     position: absolute;
+    top: 70%;
+    left: 0;
+    right: 1px;
+    padding-bottom: 400px;
+    border-bottom-width: 30vh;
 
     &-title {
-        display: flex;
         position: absolute;
-        top: 100%;
-        left: 50%;
+        top: 50%;
+        left: 47%;
         color: white;
     }
+
     &-arrow-left {
         position: absolute;
         display: flex;
@@ -131,8 +140,8 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(135deg);
-        top: 115%;
-        left: 33%;
+        top: 80%;
+        left: 35%;
     }
 
     &-arrow-right {
@@ -143,28 +152,22 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(-45deg);
-        top: 115%;
-        left: 71%;
+        top: 80%;
+        left: 60%;
     }
-}
-
-#action-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 8%;
-    padding-left: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 #horror-category-container {
     position: absolute;
+    top: 95%;
+    left: 0;
+    right: 1px;
+    padding-bottom: 400px;
 
     &-title {
         position: absolute;
-        top: 135%;
-        left: 50%;
+        top: 50%;
+        left: 47%;
         color: white;
     }
 
@@ -176,8 +179,8 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(135deg);
-        top: 155%;
-        left: 33%;
+        top: 80%;
+        left: 35%;
     }
 
     &-arrow-right {
@@ -188,28 +191,22 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(-45deg);
-        top: 155%;
-        left: 71%;
+        top: 80%;
+        left: 60%;
     }
-}
-
-#horror-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 8%;
-    padding-left: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
 }
 
 #crime-category-container {
     position: absolute;
+    top: 120%;
+    left: 0;
+    right: 1px;
+    padding-bottom: 400px;
 
     &-title {
         position: absolute;
-        top: 173%;
-        left: 50%;
+        top: 50%;
+        left: 47%;
         color: white;
     }
 
@@ -221,8 +218,8 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(135deg);
-        top: 190%;
-        left: 33%;
+        top: 80%;
+        left: 35%;
     }
 
     &-arrow-right {
@@ -233,23 +230,15 @@ header {
         display: inline-block;
         padding: 10px;
         transform: rotate(-45deg);
-        top: 190%;
-        left: 71%;
+        top: 80%;
+        left: 60%;
     }
 }
 
-#crime-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 8%;
-    padding-left: 5%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-.footer {
-    margin-top: 5%;
+footer {
+    position: absolute;
+    bottom: -70%;
+    width: 99.9%;
     background-color: rgb(112, 118, 131);
     border: 1px black solid;
     text-align: center;
