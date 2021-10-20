@@ -17,11 +17,12 @@ function fetchMovies(genre, page) {
 }
 
 function fetchAndUpdate() {
-    //fetchMovies("adventure", 1).then(results => addCarouselItem(results, "aventure-category-movies-carousel"))
-    fetchMovies("", 1).then(results => addCarouselItem(results, "top-rated-movie"))
-
+    fetchMovies("", 1).then(movie => displayMovie(movie.results[0], "top-rated-movie"))
+    fetchMovies("", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "best-rated-movies-carousel")}})
+    fetchMovies("adventure", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "adventure-category-movies-carousel")}})
+    fetchMovies("horror", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "horror-category-movies-carousel")}})
+    fetchMovies("crime", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "crime-category-movies-carousel")}})
 }
-
 /* Add movies to the carousel */
 function addCarouselItem(movie, carouselDivId) {
     const div_item = document.createElement("div");
