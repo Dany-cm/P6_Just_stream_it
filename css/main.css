@@ -1,9 +1,14 @@
 body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "content" "footer";
   margin: 0;
   background-color: #2e3136;
 }
 
 header {
+  grid-area: header;
   background: linear-gradient(black, #2e3136);
 }
 
@@ -11,8 +16,8 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 2%;
   bottom: 50px;
+  gap: 50px;
 }
 .navbar a {
   text-decoration: none;
@@ -21,250 +26,17 @@ header {
   font-size: 20px;
 }
 
-/* .top-rated-movie-container {
-    //position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    //border: 10px black solid;
+.movies-container {
+  display: flex;
+  grid-area: content;
+  justify-content: center;
+}
+.movie {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
 }
 
-#top-rated-movie {
-
-    &-title {
-        position: relative;
-        top: 25%;
-        left: 11%;
-        color: white;
-    }
-
-    &-image {
-        position: relative;
-        top: 13%;
-        left: 43.5%;
-    }
-
-    &-button-play {
-        position: relative;
-        top: 40%;
-        left: 11%;
-        color: white;
-        text-decoration: none;
-        border-radius: 30px;
-        background-color: #e60606;
-        padding: 0.4em 2em
-    }
-
-    &-button-info {
-        position: relative;
-        padding: 0.4em 2em;
-        border-radius: 30px;
-        top: 40%;
-        left: 15%;
-        background-color: #e60606;
-        color: white;
-        text-decoration: none;
-    }
-} * /
-/*
-#best-rated-movies-container {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: 1px;
-    padding-bottom: 400px;
-
-    &-title {
-        position: absolute;
-        top: 13%;
-        left: 45%;
-        color: white;
-    }
-
-    &-arrow-left {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(135deg);
-        top: 45%;
-        left: 29%;
-    }
-
-    &-arrow-right {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(-45deg);
-        top: 45%;
-        left: 70%;
-    }
-}
-
-#best-rated-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 10%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#adventure-category-container {
-    position: absolute;
-    top: 70%;
-    left: 0;
-    right: 1px;
-    padding-bottom: 400px;
-    border-bottom-width: 30vh;
-
-    &-title {
-        position: absolute;
-        top: 15%;
-        left: 47%;
-        color: white;
-    }
-
-    &-arrow-left {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(135deg);
-        top: 45%;
-        left: 29%;
-    }
-
-    &-arrow-right {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(-45deg);
-        top: 45%;
-        left: 70%;
-    }
-}
-
-#adventure-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 10%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#horror-category-container {
-    position: absolute;
-    top: 95%;
-    left: 0;
-    right: 1px;
-    padding-bottom: 400px;
-
-    &-title {
-        position: absolute;
-        top: 21%;
-        left: 47%;
-        color: white;
-    }
-
-    &-arrow-left {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(135deg);
-        top: 45%;
-        left: 29%;
-    }
-
-    &-arrow-right {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(-45deg);
-        top: 45%;
-        left: 70%;
-    }
-}
-
-#horror-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 13%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-#crime-category-container {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    right: 1px;
-
-    &-title {
-        position: absolute;
-        top: 43%;
-        left: 47%;
-        color: white;
-    }
-
-    &-arrow-left {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(135deg);
-        top: 75%;
-        left: 29%;
-    }
-
-    &-arrow-right {
-        position: absolute;
-        display: flex;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 10px;
-        transform: rotate(-45deg);
-        top: 75%;
-        left: 70%;
-    }
-}
-
-#crime-category-movies-carousel {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 16%;
-    margin-left: 30%;
-    margin-right: 30%;
-}
-
-footer {
-    position: absolute;
-    bottom: -80%;
-    width: 99.9%;
-    background-color: rgb(112, 118, 131);
-    border: 1px black solid;
-    text-align: center;
-    color: lightgray;
+/* .footer {
+    grid-area: footer;
 } */
