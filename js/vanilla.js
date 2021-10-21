@@ -16,13 +16,31 @@ function fetchMovies(genre, page) {
         })
 }
 
+/*  Call fetchMovies with selected parameters and add it to the carousel */
 function fetchAndUpdate() {
-    fetchMovies("", 1).then(movie => displayMovie(movie.results[0], "top-rated-movie"))
-    fetchMovies("", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "best-rated-movies-carousel")}})
-    fetchMovies("adventure", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "adventure-category-movies-carousel")}})
-    fetchMovies("horror", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "horror-category-movies-carousel")}})
-    fetchMovies("crime", 1).then(movie => { for (movie of movie.results) {addCarouselItem(movie, "crime-category-movies-carousel")}})
+    fetchMovies("", 1).then(movie => addCarouselItem(movie.results[0], "top-rated-movie"))
+    fetchMovies("", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "best-rated-movies")
+        }
+    })
+    fetchMovies("adventure", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "adventure-category-movies")
+        }
+    })
+    fetchMovies("horror", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "horror-category-movies")
+        }
+    })
+    fetchMovies("crime", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "crime-category-movies")
+        }
+    })
 }
+
 /* Add movies to the carousel */
 function addCarouselItem(movie, carouselDivId) {
     const div_item = document.createElement("div");
@@ -35,8 +53,8 @@ function addCarouselItem(movie, carouselDivId) {
     document.getElementById(carouselDivId).appendChild(div_item)
 }
 
-/* Display the movie */
-function displayMovie(retrievedMovie, divContainer) {
-    document.getElementById(divContainer + "-image").src = retrievedMovie.image_url
-    document.getElementById(divContainer + "-title").innerText = retrievedMovie.title
+function scrollContainer(container, direction) {
+    console.log('event', event)
+    console.log('container', container)
+    console.log('direction', direction)
 }

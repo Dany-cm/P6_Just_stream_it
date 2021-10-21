@@ -1,27 +1,19 @@
-html {
-    height: 100%;
-}
 body {
     margin: 0;
-    height: 160vh;
     background-color: rgb(46, 49, 54);
 }
 
 header {
-    position: absolute;
-    box-sizing: content-box;
-    width: 100%;
     background: linear-gradient(black, rgb(46, 49, 54));
 }
 
 .navbar {
-    position: absolute;
-    top: 30%;
-    left: 45%;
-    text-align: center;
-
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    bottom: 50px;
     a {
-        padding-right: 50px;
         text-decoration: none;
         color: lightgray;
         font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -29,33 +21,31 @@ header {
     }
 }
 
-#top-rated-movie-container {
-    position: absolute;
-    left: 0;
-    right: 1px;
-    margin-top: 9rem;
-    padding: 2em 50em;
-    padding-bottom: 400px;
-    background-color: black;
+/* .top-rated-movie-container {
+    //position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    //border: 10px black solid;
 }
 
 #top-rated-movie {
 
     &-title {
-        position: absolute;
+        position: relative;
         top: 25%;
         left: 11%;
         color: white;
     }
 
     &-image {
-        position: absolute;
+        position: relative;
         top: 13%;
         left: 43.5%;
     }
 
     &-button-play {
-        position: absolute;
+        position: relative;
         top: 40%;
         left: 11%;
         color: white;
@@ -66,7 +56,7 @@ header {
     }
 
     &-button-info {
-        position: absolute;
+        position: relative;
         padding: 0.4em 2em;
         border-radius: 30px;
         top: 40%;
@@ -75,8 +65,8 @@ header {
         color: white;
         text-decoration: none;
     }
-}
-
+} * /
+/*
 #best-rated-movies-container {
     position: absolute;
     top: 40%;
@@ -277,4 +267,4 @@ footer {
     border: 1px black solid;
     text-align: center;
     color: lightgray;
-}
+} */
