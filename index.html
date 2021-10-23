@@ -12,52 +12,55 @@
 <body>
    <header>
       <div class="logo">
-         <img src="logo.png" />
+         <img src="logo.png" alt="Logo" />
       </div>
       <nav class="navbar">
          <a href="#">Accueil</a>
          <a href="#">Catégories</a>
       </nav>
    </header>
-   <section class="top-rated-movie-container">
-      <div class="top-rated-movie">
-         <h1 id="top-rated-movie-title"></h1>
-         <div class="top-rated-movie-image">
-            <img id="top-rated-movie-image" src="#" alt="image du film" style="width: 300px;" />
-         </div>
-         <p id="top-rated-movie-description"></p>
-         <a id="top-rated-movie-button-play" href="#button">Play</a>
-         <a id="top-rated-movie-button-info" href="#modal">Plus d'information</a>
+   <section class="movies-container" id="top-rated-movie">
+      <div class="movie">
+         <p class="movie-description"></p>
+         <a class="movie-button-play" href="#button">Play</a>
+         <a class="movie-button-info" href="#modal">Plus d'information</a>
       </div>
    </section>
-   <section class="best-rated-movies-container">
-      <h1 id="best-rated-movies-container-title">Films les mieux notés</h1>
-      <div id="best-rated-movies-container-arrow-left" onclick="scrollContainer('best', 'left')"></div>
-      <div id="best-rated-movies-container-arrow-right" onclick="scrollContainer('best', 'right')"></div>
-      <div id="best-rated-movies-carousel">
+   <section class="movies-container" id="best-rated-movies">
+      <div class="movie">
+         <h1 class="movies-title">Films les mieux notés</h1>
+         <div class="movies-arrow-left" onclick="scrollContainer('best', 'left')"></div>
+         <div class="movies-arrow-right" onclick="scrollContainer('best', 'right')"></div>
+         <div class="movies-carousel"></div>
+      </div>
    </section>
-   <section class="action-category-container">
-      <h1 id="action-category-container-title">Action</h1>
-      <div id="action-category-container-arrow-left" onclick="scrollContainer('action', 'left')"></div>
-      <div id="action-category-container-arrow-right" onclick="scrollContainer('action', 'right')"></div>
-      <div id="action-category-movies-carousel"></div>
+   <section class="movies-container" id="adventure-category-movies">
+      <div class="movie">
+         <h1 class="movies-title">Aventure</h1>
+         <div class="movies-arrow-left" onclick="scrollContainer('aventure', 'left')"></div>
+         <div class="movies-arrow-right" onclick="scrollContainer('aventure', 'right')"></div>
+         <div class="movies-carousel"></div>
+      </div>
    </section>
-   <section class="horror-category-movies-container">
-      <h1 id="horror-category-container-title">Horreur</h1>
-      <div id="horror-category-container-arrow-left" onclick="scrollContainer('horror', 'left')"></div>
-      <div id="horror-category-container-arrow-right" onclick="scrollContainer('horror', 'right')"></div>
-      <div id="horror-category-movies-carousel"></div>
+   <section class="movies-container" id="horror-category-movies">
+      <div class="movie">
+         <h1 class="movies-title">Horreur</h1>
+         <div class="movies-arrow-left" onclick="scrollContainer('horror', 'left')"></div>
+         <div class="movies-arrow-right" onclick="scrollContainer('horror', 'right')"></div>
+         <div class="movies-carousel"></div>
+      </div>
    </section>
-   <section class="drama-category-movies-container">
-      <h1 id="drama-category-container-title">Drama</h1>
-      <div id="drama-category-container-arrow-left" onclick="scrollContainer('drama', 'left')"></div>
-      <div id="drama-category-container-arrow-right" onclick="scrollContainer('drama', 'right')"></div>
-      <div id="drama-category-movies-carousel"></div>
+   <section class="movies-container" id="crime-category-movies">
+      <div class="movie">
+         <h1 class="movies-title">Crime</h1>
+         <div class="movies-arrow-left" onclick="scrollContainer('crime', 'left')"></div>
+         <div class="movies-arrow-right" onclick="scrollContainer('crime', 'right')"></div>
+         <div class="movies-carousel"></div>
+      </div>
    </section>
-</body>
-<footer class="footer">
-   <p>Just Stream It! All rights reserved.</p>
-</footer>
+   <footer>
+      <p>Just Stream It! All rights reserved.</p>
+   </footer>
 </body>
 
 </html>

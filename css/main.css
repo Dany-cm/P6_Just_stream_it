@@ -1,314 +1,42 @@
 body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "content" "footer";
+  margin: 0;
   background-color: #2e3136;
 }
 
 header {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  padding-right: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#2e3136));
+  grid-area: header;
   background: linear-gradient(black, #2e3136);
 }
 
 .navbar {
-  position: absolute;
-  top: 40%;
-  left: 36%;
-  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 50px;
+  gap: 50px;
+}
+.navbar a {
+  text-decoration: none;
+  color: lightgray;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
 
-.navbar a {
-  padding-left: 120px;
-  text-decoration: none;
-  color: lightgray;
-}
-
-.top-rated-movie-container {
-  margin-top: 9rem;
-  padding: 2em 50em;
-  border: 10px lightcoral solid;
-  background-color: black;
-}
-
-#top-rated-movie {
-  position: absolute;
-}
-
-#top-rated-movie-title {
-  position: absolute;
-  top: 25%;
-  left: 6%;
-  color: white;
-}
-
-#top-rated-movie-image {
-  padding-left: 40%;
-}
-
-#top-rated-movie-button-play {
-  position: absolute;
-  padding: 0.4em 2em;
-  border-radius: 30px;
-  top: 30%;
-  left: 6%;
-  background-color: #e60606;
-  color: white;
-  text-decoration: none;
-}
-
-#top-rated-movie-button-info {
-  position: absolute;
-  padding: 0.4em 2em;
-  border-radius: 30px;
-  top: 30%;
-  left: 10%;
-  background-color: #e60606;
-  color: white;
-  text-decoration: none;
-}
-
-#best-rated-movies-container {
-  position: absolute;
-}
-
-#best-rated-movies-container-title {
-  position: absolute;
-  top: 62%;
-  left: 48%;
-  color: white;
-}
-
-#best-rated-movies-container-arrow-left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.movies-container {
   display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  top: 80%;
-  left: 33%;
+  grid-area: content;
+  justify-content: center;
 }
-
-#best-rated-movies-container-arrow-right {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.movie {
   display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 80%;
-  left: 71%;
+  background-color: white;
+  border-radius: 10px;
 }
 
-#best-rated-movies-carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 8%;
-  padding-left: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-}
-
-#action-category-container {
-  position: absolute;
-}
-
-#action-category-container-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  color: white;
-}
-
-#action-category-container-arrow-left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  top: 115%;
-  left: 33%;
-}
-
-#action-category-container-arrow-right {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 115%;
-  left: 71%;
-}
-
-#action-category-movies-carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 8%;
-  padding-left: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-}
-
-#horror-category-container {
-  position: absolute;
-}
-
-#horror-category-container-title {
-  position: absolute;
-  top: 135%;
-  left: 50%;
-  color: white;
-}
-
-#horror-category-container-arrow-left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  top: 155%;
-  left: 33%;
-}
-
-#horror-category-container-arrow-right {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 155%;
-  left: 71%;
-}
-
-#horror-category-movies-carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 8%;
-  padding-left: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-}
-
-#drama-category-container {
-  position: absolute;
-}
-
-#drama-category-container-title {
-  position: absolute;
-  top: 173%;
-  left: 50%;
-  color: white;
-}
-
-#drama-category-container-arrow-left {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-  top: 190%;
-  left: 33%;
-}
-
-#drama-category-container-arrow-right {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 190%;
-  left: 71%;
-}
-
-#drama-category-movies-carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-top: 8%;
-  padding-left: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-}
-
-.footer {
-  margin-top: 5%;
-  background-color: #707683;
-  border: 1px black solid;
-  text-align: center;
-  color: lightgray;
-}
+/* .footer {
+    grid-area: footer;
+} */

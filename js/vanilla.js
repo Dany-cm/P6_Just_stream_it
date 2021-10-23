@@ -1,12 +1,11 @@
 const api_url = "http://localhost:8000/api/v1/titles/"
 
 /* Display all movies and fill the carousel */
-getBestRatedMovie()
-initCarouselBestRated()
+fetchAndUpdate()
 
-/* Get the best rated movie on imdb */
-function getBestRatedMovie() {
-    fetch(api_url + '?sort_by=-imdb_score')
+/* Fetch movies with parameters : genre, page, carouseldivid */
+function fetchMovies(genre, page) {
+    return fetch(`${api_url}?genre=${genre}&sort_by=-imdb_score&page=${page}`)
         .then((res) => {
             if (res.ok) {
                 return res.json();
@@ -15,94 +14,31 @@ function getBestRatedMovie() {
                 throw new Error("Something went wrong");
             }
         })
-        .then((data => {
-            displayMovie(data.results[0], "top-rated-movie")
-        }))
-        .catch((error) => {
-            console.log("Fetch Error :-S", error);
-        });
 }
 
-/* Display the movie */
-function displayMovie(retrievedMovie, divContainer) {
-    document.getElementById(divContainer + "-image").src = retrievedMovie.image_url
-    document.getElementById(divContainer + "-title").innerText = retrievedMovie.title
-}
-
-/* Init the carousel and retrieve movie information */
-function initCarouselBestRated() {
-    fetch(api_url + '?sort_by=-imdb_score')
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            else {
-                throw new Error("Something went wrong");
-            }
-        })
-        .then((data => {
-            for (let i = 0; i < 4; ++i) {
-                addCarouselItem(data.results[i], "best-rated-movies-carousel")
-            }
-            
-        }))
-        .catch((error) => {
-            console.log("Fetch Error :-S", error);
-        });
-
-    fetch(api_url + '?genre=action' + '&sort_by=-imdb_score')
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            else {
-                throw new Error("Something went wrong");
-            }
-        })
-        .then((data => {
-            for (let i = 0; i < 4; ++i) {
-                addCarouselItem(data.results[i], "action-category-movies-carousel")
-            }
-        }))
-        .catch((error) => {
-            console.log("Fetch Error :-S", error);
-        });
-
-    fetch(api_url + '?genre=horror' + '&sort_by=-imdb_score')
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            else {
-                throw new Error("Something went wrong");
-            }
-        })
-        .then((data => {
-            for (let i = 0; i < 4; ++i) {
-                addCarouselItem(data.results[i], "horror-category-movies-carousel")
-            }
-        }))
-        .catch((error) => {
-            console.log("Fetch Error :-S", error);
-        });
-
-    fetch(api_url + '?genre=drama' + '&sort_by=-imdb_score')
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            else {
-                throw new Error("Something went wrong");
-            }
-        })
-        .then((data => {
-            for (let i = 0; i < 4; ++i) {
-                addCarouselItem(data.results[i], "drama-category-movies-carousel")
-            }
-        }))
-        .catch((error) => {
-            console.log("Fetch Error :-S", error);
-        });
+/*  Call fetchMovies with selected parameters and add it to the carousel */
+function fetchAndUpdate() {
+    fetchMovies("", 1).then(movie => addCarouselItem(movie.results[0], "top-rated-movie"))
+    fetchMovies("", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "best-rated-movies")
+        }
+    })
+    fetchMovies("adventure", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "adventure-category-movies")
+        }
+    })
+    fetchMovies("horror", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "horror-category-movies")
+        }
+    })
+    fetchMovies("crime", 1).then(movie => {
+        for (movie of movie.results) {
+            addCarouselItem(movie, "crime-category-movies")
+        }
+    })
 }
 
 /* Add movies to the carousel */
@@ -117,7 +53,8 @@ function addCarouselItem(movie, carouselDivId) {
     document.getElementById(carouselDivId).appendChild(div_item)
 }
 
-function scrollContainer(direction) {
+function scrollContainer(container, direction) {
     console.log('event', event)
+    console.log('container', container)
     console.log('direction', direction)
 }

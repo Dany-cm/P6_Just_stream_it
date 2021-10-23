@@ -1,1 +1,5 @@
 env/
+node_modules/
+server.js
+yarn.lock
+package.json
