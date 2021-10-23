@@ -19,45 +19,50 @@
          <a href="#">Catégories</a>
       </nav>
    </header>
-   <section class="movies-container" id="top-rated-movie">
-      <div class="movie">
-         <p class="movie-description"></p>
+   <div class="listings">
+      <section class="carousel" id="top-rated-movie">
+         <h1 class="movie-title"></h1>
          <a class="movie-button-play" href="#button">Play</a>
          <a class="movie-button-info" href="#modal">Plus d'information</a>
-      </div>
-   </section>
-   <section class="movies-container" id="best-rated-movies">
-      <div class="movie">
-         <h1 class="movies-title">Films les mieux notés</h1>
-         <div class="movies-arrow-left" onclick="scrollContainer('best', 'left')"></div>
-         <div class="movies-arrow-right" onclick="scrollContainer('best', 'right')"></div>
-         <div class="movies-carousel"></div>
-      </div>
-   </section>
-   <section class="movies-container" id="adventure-category-movies">
-      <div class="movie">
-         <h1 class="movies-title">Aventure</h1>
-         <div class="movies-arrow-left" onclick="scrollContainer('aventure', 'left')"></div>
-         <div class="movies-arrow-right" onclick="scrollContainer('aventure', 'right')"></div>
-         <div class="movies-carousel"></div>
-      </div>
-   </section>
-   <section class="movies-container" id="horror-category-movies">
-      <div class="movie">
-         <h1 class="movies-title">Horreur</h1>
-         <div class="movies-arrow-left" onclick="scrollContainer('horror', 'left')"></div>
-         <div class="movies-arrow-right" onclick="scrollContainer('horror', 'right')"></div>
-         <div class="movies-carousel"></div>
-      </div>
-   </section>
-   <section class="movies-container" id="crime-category-movies">
-      <div class="movie">
-         <h1 class="movies-title">Crime</h1>
-         <div class="movies-arrow-left" onclick="scrollContainer('crime', 'left')"></div>
-         <div class="movies-arrow-right" onclick="scrollContainer('crime', 'right')"></div>
-         <div class="movies-carousel"></div>
-      </div>
-   </section>
+         <div class="movie">
+            <h1 class="movie-title"></h1>
+            <!-- <p class="movie-description"></p> -->
+            <div class="movies-carousel"></div>
+         </div>
+      </section>
+      <section class="carousel" id="best-rated-movies">
+         <div class="movies">
+            <h1 class="movies-title">Films les mieux notés</h1>
+            <div class="movies-arrow-left" onclick="scrollContainer('best-rated-movies', 'previous')"></div>
+            <div class="movies-arrow-right" onclick="scrollContainer('best-rated-movies', 'next')"></div>
+            <div class="movies-carousel"></div>
+         </div>
+      </section>
+      <section class="carousel" id="adventure-category-movies">
+         <div class="movies">
+            <h1 class="movies-title">Aventure</h1>
+            <div class="movies-arrow-left" onclick="scrollContainer('adventure-category-movies', 'previous')"></div>
+            <div class="movies-arrow-right" onclick="scrollContainer('adventure-category-movies', 'next')"></div>
+            <div class="movies-carousel"></div>
+         </div>
+      </section>
+      <section class="carousel" id="horror-category-movies">
+         <div class="movies">
+            <h1 class="movies-title">Horreur</h1>
+            <div class="movies-arrow-left" onclick="scrollContainer('horror-category-movies', 'previous')"></div>
+            <div class="movies-arrow-right" onclick="scrollContainer('horror-category-movies', 'next')"></div>
+            <div class="movies-carousel"></div>
+         </div>
+      </section>
+      <section class="carousel" id="crime-category-movies">
+         <div class="movies">
+            <h1 class="movies-title">Crime</h1>
+            <div class="movies-arrow-left" onclick="scrollContainer('crime-category-movies', 'previous')"></div>
+            <div class="movies-arrow-right" onclick="scrollContainer('crime-category-movies', 'next')"></div>
+            <div class="movies-carousel"></div>
+         </div>
+      </section>
+   </div>
    <footer>
       <p>Just Stream It! All rights reserved.</p>
    </footer>
