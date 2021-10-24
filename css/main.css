@@ -23,7 +23,7 @@ header {
   grid-auto-flow: column;
   justify-content: center;
   align-content: center;
-  gap: 50px;
+  gap: 200px;
 }
 .navbar a {
   text-decoration: none;
@@ -31,271 +31,79 @@ header {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 20px;
 }
-
-.carousel {
-  display: flex;
-  grid-area: listings;
-  justify-content: center;
-  margin-bottom: 5%;
+.navbar .dropdown {
+  display: inline-block;
+  position: relative;
 }
-
-#top-rated-movie {
-  display: grid;
-  border: 10px lightcoral solid;
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  width: 13em;
+  overflow: auto;
+  background-color: gray;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
 }
-#top-rated-movie .movie {
-  display: grid;
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
 }
-#top-rated-movie .movie-title {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  color: white;
-}
-#top-rated-movie .movie-button-play {
-  display: grid;
-  height: 30px;
-  justify-content: center;
-  align-content: center;
-  padding: 10px 10px;
-  border-radius: 30px;
-  background-color: #e60606;
-  color: white;
+.navbar .dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  font-style: bold;
   text-decoration: none;
 }
-#top-rated-movie .movie-button-info {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  padding: 10px 10px;
-  border-radius: 30px;
-  background-color: #e60606;
+.navbar .dropdown-content a:hover {
   color: white;
+  background-color: steelblue;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #2e3136;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  color: white;
+  height: 40%;
+  width: 70%;
+}
+.modal-content > img {
+  position: relative;
+  top: 100px;
+}
+.modal-content > p {
+  position: relative;
+  left: 12%;
+  bottom: 200px;
+  display: block;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+/* The Close Button */
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
   text-decoration: none;
-}
-#top-rated-movie .movie .movies-carousel {
-  display: grid;
-}
-
-#best-rated-movies {
-  display: grid;
-}
-#best-rated-movies .movies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 10px;
-}
-#best-rated-movies .movies-arrow-left {
-  display: grid;
-  justify-self: right;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  width: 20px;
-  height: 20px;
-  margin-right: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(135deg);
-  visibility: visible;
-}
-#best-rated-movies .movies-arrow-right {
-  display: grid;
-  justify-self: left;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 3;
-  width: 20px;
-  height: 20px;
-  margin-left: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(-45deg);
-}
-#best-rated-movies .movies-title {
-  display: grid;
-  grid-row-start: 1;
-  grid-column-start: 2;
-  justify-self: center;
-  align-self: center;
-  color: white;
-}
-#best-rated-movies .movies .movies-carousel {
-  display: grid;
-  grid-row-start: 2;
-  grid-column-start: 2;
-  justify-items: center;
-  align-items: center;
-  grid-auto-flow: column;
-  gap: 10px;
-}
-
-#adventure-category-movies {
-  display: grid;
-}
-#adventure-category-movies .movies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 10px;
-}
-#adventure-category-movies .movies-arrow-left {
-  display: grid;
-  justify-self: right;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  width: 20px;
-  height: 20px;
-  margin-right: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(135deg);
-}
-#adventure-category-movies .movies-arrow-right {
-  display: grid;
-  justify-self: left;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 3;
-  width: 20px;
-  height: 20px;
-  margin-left: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(-45deg);
-}
-#adventure-category-movies .movies-title {
-  display: grid;
-  grid-row-start: 1;
-  grid-column-start: 2;
-  justify-self: center;
-  align-self: center;
-  color: white;
-}
-#adventure-category-movies .movies .movies-carousel {
-  display: grid;
-  grid-row-start: 2;
-  grid-column-start: 2;
-  justify-items: center;
-  align-items: center;
-  grid-auto-flow: column;
-  gap: 10px;
-}
-
-#horror-category-movies {
-  display: grid;
-}
-#horror-category-movies .movies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 10px;
-}
-#horror-category-movies .movies-arrow-left {
-  display: grid;
-  justify-self: right;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  width: 20px;
-  height: 20px;
-  margin-right: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(135deg);
-}
-#horror-category-movies .movies-arrow-right {
-  display: grid;
-  justify-self: left;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 3;
-  width: 20px;
-  height: 20px;
-  margin-left: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(-45deg);
-}
-#horror-category-movies .movies-title {
-  display: grid;
-  grid-row-start: 1;
-  grid-column-start: 2;
-  justify-self: center;
-  align-self: center;
-  color: white;
-}
-#horror-category-movies .movies .movies-carousel {
-  display: grid;
-  grid-row-start: 2;
-  grid-column-start: 2;
-  justify-items: center;
-  align-items: center;
-  grid-auto-flow: column;
-  gap: 10px;
-}
-
-#crime-category-movies {
-  display: grid;
-}
-#crime-category-movies .movies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 10px;
-}
-#crime-category-movies .movies-arrow-left {
-  display: grid;
-  justify-self: right;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 1;
-  width: 20px;
-  height: 20px;
-  margin-right: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(135deg);
-}
-#crime-category-movies .movies-arrow-right {
-  display: grid;
-  justify-self: left;
-  align-self: center;
-  grid-row-start: 2;
-  grid-column-start: 3;
-  width: 20px;
-  height: 20px;
-  margin-left: 5%;
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  transform: rotate(-45deg);
-}
-#crime-category-movies .movies-title {
-  display: grid;
-  grid-row-start: 1;
-  grid-column-start: 2;
-  justify-self: center;
-  align-self: center;
-  color: white;
-}
-#crime-category-movies .movies .movies-carousel {
-  display: grid;
-  grid-row-start: 2;
-  grid-column-start: 2;
-  justify-items: center;
-  align-items: center;
-  grid-auto-flow: column;
-  gap: 10px;
+  cursor: pointer;
 }
 
 footer {

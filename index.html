@@ -2,10 +2,10 @@
 <html lang="fr">
 
 <head>
-   <meta charset="utf-8">
+   <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Just Stream It</title>
-   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/loader.css">
    <script src="js/vanilla.js"></script>
 </head>
 
@@ -16,17 +16,23 @@
       </div>
       <nav class="navbar">
          <a href="#">Accueil</a>
-         <a href="#">Catégories</a>
+         <div class="dropdown">
+            <a href="#">Catégories</a>
+            <div class="dropdown-content">
+               <a href="#best-rated-movies">Films les mieux notés</a>
+               <a href="#adventure-category-movies">Aventure</a>
+               <a href="#horror-category-movies">Horreur</a>
+               <a href="#crime-category-movies">Crime</a>
+            </div>
+         </div>
       </nav>
    </header>
    <div class="listings">
       <section class="carousel" id="top-rated-movie">
-         <h1 class="movie-title"></h1>
-         <a class="movie-button-play" href="#button">Play</a>
-         <a class="movie-button-info" href="#modal">Plus d'information</a>
          <div class="movie">
             <h1 class="movie-title"></h1>
-            <!-- <p class="movie-description"></p> -->
+            <a class="movie-button-play" data-modal="modal" data-target="#myModal">Play</a>
+            <a class="movie-button-info" data-modal-id="#myModal" data-target="#myModal">Plus d'information</a>
             <div class="movies-carousel"></div>
          </div>
       </section>
@@ -62,10 +68,28 @@
             <div class="movies-carousel"></div>
          </div>
       </section>
-   </div>
-   <footer>
-      <p>Just Stream It! All rights reserved.</p>
-   </footer>
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img class="movie-img" src="" alt="">
+            <p class="movie-titles"></p>
+            <p class="movie-genre"></p>
+            <p class="movie-release-date"></p>
+            <p class="movie-rated"></p>
+            <p class="movie-rating-imdb"></p>
+            <p class="movie-director">
+               </h3>
+            <p class="movie-list-actors">
+               </h3>
+            <p class="movie-duration"></p>
+            <p class="movie-country-origin"></p>
+            <p class="movie-box-office-result"></p>
+            <p class="movie-description"></p>
+         </div>
+      </div>
+      <footer>
+         <p>Just Stream It! All rights reserved.</p>
+      </footer>
 </body>
 
 </html>
