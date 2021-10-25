@@ -109,7 +109,8 @@ function scrollContainer(container, direction) {
 const onImgClicked = function (event) {
     const modal = document.getElementById("myModal");
     const movie_id = event.target.getAttribute('id')
-    var span = document.getElementsByClassName("close-modal")[0];
+    const span = document.getElementsByClassName("close-modal")[0];
+
     fetch(`${api_url}${movie_id}`)
         .then(res => res.json())
         .then(movie => {

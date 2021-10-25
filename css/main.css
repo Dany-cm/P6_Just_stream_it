@@ -66,6 +66,7 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 /* Modal Content/Box */
@@ -73,22 +74,24 @@ header {
   background-color: #2e3136;
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid grey;
   color: white;
   height: 40%;
-  width: 70%;
+  width: 50%;
+  overflow: hidden;
 }
 .modal-content > img {
   position: relative;
+  border: 1px solid grey;
   top: 100px;
 }
 .modal-content > p {
+  width: 70%;
   position: relative;
-  left: 12%;
-  bottom: 200px;
+  left: 18%;
+  bottom: 250px;
   display: block;
   font-weight: bold;
-  word-break: break-all;
 }
 
 /* The Close Button */
