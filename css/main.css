@@ -91,7 +91,7 @@ header {
   left: 18%;
   bottom: 250px;
   display: block;
-  font-weight: bold;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
 
 /* The Close Button */
