@@ -19,6 +19,7 @@ Pipenv is recommended if you do not have it, install it or see option 2.
 # Install pipenv
 
 pip install pipenv
+```
 
 ## Option 1: Using pipenv
 
