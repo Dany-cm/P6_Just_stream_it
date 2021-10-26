@@ -9,13 +9,16 @@ This is the front end of the website for Just Stream It!
 ## Installation
 
 Download the repository and extract in your web server folder.
+```bash
+git clone https://github.com/Danycm1/P6_Just_stream_it.git
+you can also download the code using as a zip file https://github.com/Danycm1/P6_Just_stream_it/archive/refs/heads/master.zip
+```
 
-pipenv is required but not necessary, see option 2
+Pipenv is recommended if you do not have it, install it or see option 2.
 ```bash
 # Install pipenv
 
 pip install pipenv
-```
 
 ## Option 1: Using pipenv
 
