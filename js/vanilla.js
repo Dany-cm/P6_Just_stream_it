@@ -124,7 +124,7 @@ const onImgClicked = function (event) {
             document.getElementsByClassName("movie-list-actors")[0].innerHTML = `<p><strong>Liste des acteurs: </strong>${movie.actors}</p>`
             document.getElementsByClassName("movie-duration")[0].innerHTML = `<p><strong>Duration: </strong>${movie.duration} minutes </p>`
             document.getElementsByClassName("movie-country-origin")[0].innerHTML = `<p><strong>Origine(s): </strong>${movie.countries}</p>`
-            document.getElementsByClassName("movie-box-office-result")[0].innerHTML = `<p><strong>Résultat du box office: </strong>${movie.worldwide_gross_income ?? 'Non disponible'}</p>`
+            document.getElementsByClassName("movie-box-office-result")[0].innerHTML = `<p><strong>Résultat du box office: </strong>${movie.worldwide_gross_income ?? 'Not available'}</p>`
             document.getElementsByClassName("movie-description")[0].innerHTML = `<p><strong>Synopsis: </strong>${movie.description}</p>`
 
             /* Display the modal */
