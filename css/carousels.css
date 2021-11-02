@@ -73,7 +73,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(135deg);
-  visibility: visible;
+  cursor: pointer;
 }
 #best-rated-movies .movies-arrow-right {
   display: grid;
@@ -88,6 +88,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 #best-rated-movies .movies-title {
   display: grid;
@@ -130,6 +131,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(135deg);
+  cursor: pointer;
 }
 #adventure-category-movies .movies-arrow-right {
   display: grid;
@@ -144,6 +146,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 #adventure-category-movies .movies-title {
   display: grid;
@@ -186,6 +189,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(135deg);
+  cursor: pointer;
 }
 #horror-category-movies .movies-arrow-right {
   display: grid;
@@ -200,6 +204,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 #horror-category-movies .movies-title {
   display: grid;
@@ -242,6 +247,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(135deg);
+  cursor: pointer;
 }
 #crime-category-movies .movies-arrow-right {
   display: grid;
@@ -256,6 +262,7 @@
   border-left: 0;
   border-top: 0;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 #crime-category-movies .movies-title {
   display: grid;
