@@ -14,6 +14,18 @@ git clone https://github.com/Danycm1/P6_Just_stream_it.git
 you can also download the code using as a zip file https://github.com/Danycm1/P6_Just_stream_it/archive/refs/heads/master.zip
 ```
 
+
+Python is required in order to setup the website, you can install it here : 
+
+[Windows](https://www.python.org/downloads/windows/)
+
+[Linux](https://www.python.org/downloads/source/)
+
+[MacOS](https://www.python.org/downloads/macos/)
+
+Once Python is installed, you can proceed to Option 1 or 2
+
+
 Pipenv is recommended if you do not have it, install it or see option 2.
 ```bash
 # Install pipenv
