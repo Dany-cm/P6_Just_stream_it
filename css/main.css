@@ -50,7 +50,7 @@ header {
   display: block;
   color: #000000;
   padding: 5px;
-  font-style: bold;
+  font-weight: bold;
   text-decoration: none;
 }
 .navbar .dropdown-content a:hover {
